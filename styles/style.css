@@ -13,6 +13,7 @@
   --menu-color2: #05d4df;
   --menu-color-3: #5d58ef;
   --body-color: #f7f7f7;
+  --banar-btn-color: #000;
 }
 * {
   margin: 0;
@@ -30,8 +31,8 @@
 }
 
 .btn {
-  padding: 8px 45px;
-  border-radius: 20px;
+  padding: 10px 45px;
+  border-radius: 12px;
   border: none;
   color: var(--body-color);
   font-size: 20px;
@@ -40,6 +41,7 @@
 /* Header ------------>>> */
 header {
   background-color: var(--body-color);
+  height: 100vh;
 }
 
 nav {
@@ -87,12 +89,75 @@ nav {
   display: none;
 }
 
+/* Banar Section ------------>>>>> */
+#banar {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+.banar-intro {
+  /* background-color: #05d4df; */
+  width: 55%;
+  --banar-intro-width: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+.title {
+  font-size: 56px;
+}
+.title-color-text-1 {
+  color: var(--primary-color);
+}
+.title-color-text-2 {
+  color: var(--secondary-color);
+}
+
+.enroll-btn{
+    background-color: var(--banar-btn-color);
+}
+
+.thumbnail{
+    /* background-color: #000; */
+    width: 45%;
+    height: 100%;
+    text-align: center;
+}
+
+.thumbnail .hero-kid{
+    width: 80%; 
+    /* height: ; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Mobile responsive --------->>> */
 @media screen and (max-width: 576px) {
   /* Shared CSS --------->>> */
   .container {
     width: 90%;
     margin: 0 auto;
+  }
+  .text-normal{
+    font-size: 14px;
+  }
+  .btn{
+    padding: 6px 19px;
+    font-size: 16px;
   }
   /* Header ------------>>> */
   .header-context {
@@ -116,4 +181,36 @@ nav {
   .menu-icon {
     display: block;
   }
+
+  /* Banar Section ------->>>*/
+
+  #banar{
+    flex-direction: column;
+  }
+
+  .banar-intro{
+    order: 1;
+    width: 90%;
+    align-items: center;
+  }
+  .title{
+    font-size: 32px;
+    text-align: center;
+
+  }
+  .banar-intro p{
+    text-align: center;
+  }
+
+  .thumbnail{
+    width: 90%;
+  }
+
+  .thumbnail .hero-kid{
+    width: 95%;
+  }
+
+
+
+
 }
