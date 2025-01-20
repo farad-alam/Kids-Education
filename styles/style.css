@@ -285,12 +285,63 @@ nav {
   background-color: rgb(131, 23, 233);
 }
 .story:nth-child(1) {
-    grid-column: span 2;
+  grid-column: span 2;
   grid-row: span 2;
 }
 
 .story-btn {
   background-color: #000;
+}
+
+/* Footer Section */
+footer {
+  padding: 90px 0;
+  background-color: var(--secondary-color);
+  color: white;
+}
+.footer-context {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+#end-intro {
+  flex-basis: 37%;
+}
+.brand-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.brand-container > p {
+  font-size: 16px;
+}
+.brand-context {
+  display: flex;
+  gap: 10px;
+}
+.brand-context img {
+  height: 100%;
+}
+
+.about-menu {
+  margin-top: 20px;
+  color: white;
+}
+.footer-link {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  line-height: 40px;
+}
+.social-media{
+    margin-top: 20px;
+
+}
+
+.icons{
+    width: 35px;
 }
 
 /* Mobile responsive --------->>> */
@@ -405,5 +456,10 @@ nav {
     font-size: 8px;
     padding: 6px 12px;
     top: -33px;
+  }
+  /* Footer ------->>> */
+  .footer-context{
+    flex-direction: column;
+    gap: 30px;
   }
 }
