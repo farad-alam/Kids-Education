@@ -12,4 +12,73 @@
     --secondary-color: #01ACFD;
     --menu-color2: #05D4DF;
     --menu-color-3: #5D58EF;
+    --body-color: #F7F7F7;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Shared CSS --------->>> */
+.text-normal{
+    font-size: 20px;
+}
+
+/* Header ------------>>> */
+header{
+    background-color: var(--body-color);
+}
+
+.header-context{
+    width: 80%;
+    margin: 0 auto;
+}
+nav{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand{
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+.brand .logo{
+    width: 100%;
+    height: 100%;
+}
+
+.menu{
+    display: flex;
+    gap: 25px;
+}
+.menu-link{
+    display: block;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.menu-link:nth-child(2){
+    color: var(--secondary-color);
+}
+.menu-link:nth-child(3){
+    color: var(--menu-color2);
+}
+.menu-link:nth-child(4){
+    color: var(--menu-color-3);
+}
+
+.btn{
+    padding: 8px 45px;
+    border-radius: 20px;
+    border: none;
+    color: var(--body-color);
+    font-size: 20px;
+}
+.contact-btn{
+    background-color: var(--primary-color);
 }
