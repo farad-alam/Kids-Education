@@ -37,11 +37,15 @@
   color: var(--body-color);
   font-size: 20px;
 }
-
+.section-title {
+  font-size: 46px;
+}
 /* Header ------------>>> */
 header {
+  position: relative;
   background-color: var(--body-color);
   height: 100vh;
+  /* overflow: hidden; */
 }
 
 nav {
@@ -116,34 +120,104 @@ nav {
   color: var(--secondary-color);
 }
 
-.enroll-btn{
-    background-color: var(--banar-btn-color);
+.enroll-btn {
+  background-color: var(--banar-btn-color);
 }
 
-.thumbnail{
-    /* background-color: #000; */
-    width: 45%;
-    height: 100%;
-    text-align: center;
+.thumbnail {
+  /* background-color: #000; */
+  width: 45%;
+  height: 100%;
+  text-align: center;
 }
 
-.thumbnail .hero-kid{
-    width: 80%; 
-    /* height: ; */
+.thumbnail .hero-kid {
+  width: 80%;
+  /* height: ; */
+}
+
+/* Standard Curriculum --------->>> */
+#standard-curriculum {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 60px 0;
+  background: url("../assets/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top left;
 }
 
 
+.curriculum-context {
+}
 
+.curriculums {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: center;
+  padding: 70px 0;
+}
+.curriculum {
+  padding: 60px 30px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 5px 1px #dadada;
+  background: white;
+  background-image: linear-gradient(#85ffbe69 2%, #fffb7d0e 20%);
+}
+.curriculum:nth-child(2) {
+  /* background-color: #21d4fd; */
+  background-image: linear-gradient(#b921ff5d 2%, #21d5fd13 20%);
+}
+.curriculum:nth-child(2) > .read-more {
+  color: #9209d1;
+}
+.curriculum:nth-child(3) {
+  background-image: linear-gradient(#0088ff81 2%, #00f1fe10 20%);
+}
+.curriculum:nth-child(3) > .read-more {
+  color: #036dca;
+}
+.curriculum img {
+  width: 40%;
+}
 
+.card-title {
+  font-size: 22px;
+}
+.card-desc {
+  font-size: 15px;
+}
 
+.read-more {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  color: #07d467;
+}
 
-
-
-
-
-
-
-
+.navigation {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.left {
+  padding: 8px;
+  clip-path: circle();
+  background-color: var(--primary-color);
+}
+.right {
+  padding: 8px;
+  clip-path: circle();
+  background-color: var(--primary-color);
+}
 
 /* Mobile responsive --------->>> */
 @media screen and (max-width: 576px) {
@@ -152,14 +226,21 @@ nav {
     width: 90%;
     margin: 0 auto;
   }
-  .text-normal{
+  .text-normal {
     font-size: 14px;
   }
-  .btn{
+  .btn {
     padding: 6px 19px;
     font-size: 16px;
   }
+  .section-title {
+  font-size: 26px;
+}
   /* Header ------------>>> */
+  header{
+    height: fit-content;
+    padding-bottom: 50px;
+  }
   .header-context {
     width: 100%;
   }
@@ -184,33 +265,48 @@ nav {
 
   /* Banar Section ------->>>*/
 
-  #banar{
+  #banar {
     flex-direction: column;
   }
 
-  .banar-intro{
+  .banar-intro {
     order: 1;
     width: 90%;
     align-items: center;
   }
-  .title{
+  .title {
     font-size: 32px;
     text-align: center;
-
   }
-  .banar-intro p{
+  .banar-intro p {
     text-align: center;
   }
 
-  .thumbnail{
+  .thumbnail {
     width: 90%;
   }
 
-  .thumbnail .hero-kid{
+  .thumbnail .hero-kid {
     width: 95%;
   }
 
+  /* Standerd Curriculum ------>> */
+  #standard-curriculum{
+    padding: 20px 0;
+  }
+  .curriculums {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+}
 
-
-
+  .curriculum {
+    width: 95%;
+  }
+  .curriculum > p{
+    width: 75%;
+  }
+  .navigation{
+    display: none;
+  }
 }
