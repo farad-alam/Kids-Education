@@ -7,78 +7,113 @@
   font-style: normal;
 }
 
-:root{
-    --primary-color: #FEA301;
-    --secondary-color: #01ACFD;
-    --menu-color2: #05D4DF;
-    --menu-color-3: #5D58EF;
-    --body-color: #F7F7F7;
+:root {
+  --primary-color: #fea301;
+  --secondary-color: #01acfd;
+  --menu-color2: #05d4df;
+  --menu-color-3: #5d58ef;
+  --body-color: #f7f7f7;
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Shared CSS --------->>> */
-.text-normal{
-    font-size: 20px;
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.text-normal {
+  font-size: 20px;
+}
+
+.btn {
+  padding: 8px 45px;
+  border-radius: 20px;
+  border: none;
+  color: var(--body-color);
+  font-size: 20px;
 }
 
 /* Header ------------>>> */
-header{
-    background-color: var(--body-color);
+header {
+  background-color: var(--body-color);
 }
 
-.header-context{
-    width: 80%;
+nav {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+.brand .logo {
+  width: 100%;
+  height: 100%;
+}
+
+.menu {
+  display: flex;
+  gap: 25px;
+}
+.menu-link {
+  display: block;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.menu-link:nth-child(2) {
+  color: var(--secondary-color);
+}
+.menu-link:nth-child(3) {
+  color: var(--menu-color2);
+}
+.menu-link:nth-child(4) {
+  color: var(--menu-color-3);
+}
+
+.contact-btn {
+  background-color: var(--primary-color);
+}
+.menu-icon {
+  display: none;
+}
+
+/* Mobile responsive --------->>> */
+@media screen and (max-width: 576px) {
+  /* Shared CSS --------->>> */
+  .container {
+    width: 90%;
     margin: 0 auto;
-}
-nav{
-    padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.brand{
-    display: flex;
-    gap: 7px;
-    align-items: center;
-}
-.brand .logo{
+  }
+  /* Header ------------>>> */
+  .header-context {
     width: 100%;
-    height: 100%;
-}
+  }
+  nav {
+    padding: 20px 15px;
+    border-bottom: 1px solid var(--primary-color);
+  }
+  .brand .name {
+    display: none;
+  }
+  .menu {
+    display: none;
+  }
 
-.menu{
-    display: flex;
-    gap: 25px;
-}
-.menu-link{
+  .contact-btn {
+    display: none;
+  }
+
+  .menu-icon {
     display: block;
-    text-decoration: none;
-    font-weight: 600;
-    color: var(--primary-color);
-}
-
-.menu-link:nth-child(2){
-    color: var(--secondary-color);
-}
-.menu-link:nth-child(3){
-    color: var(--menu-color2);
-}
-.menu-link:nth-child(4){
-    color: var(--menu-color-3);
-}
-
-.btn{
-    padding: 8px 45px;
-    border-radius: 20px;
-    border: none;
-    color: var(--body-color);
-    font-size: 20px;
-}
-.contact-btn{
-    background-color: var(--primary-color);
+  }
 }
