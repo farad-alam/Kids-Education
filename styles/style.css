@@ -148,7 +148,6 @@ nav {
   background-position: top left;
 }
 
-
 .curriculum-context {
 }
 
@@ -218,6 +217,81 @@ nav {
   clip-path: circle();
   background-color: var(--primary-color);
 }
+/* Our Stories */
+
+#our-stories {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 60px 0;
+  background: url("../assets/bg.png"), linear-gradient(#fafe0009 40%, #fea10138);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.story-context {
+  position: relative;
+  /* background-color: #000; */
+}
+.stories {
+  position: relative;
+  /* max-width: fit-content; */
+  /* overflow: hidden; */
+  width: 100%;
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.story {
+  /* border: 1px solid; */
+  border-radius: 17px;
+  background: white;
+  text-align: start;
+}
+.story > img {
+  border-radius: 17px 17px 0 0;
+  width: 100%;
+}
+.story-desc {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+.story-desc > .card-title {
+  font-size: 15px;
+}
+.story-date > p {
+  font-size: 12px;
+  background: #01fda9;
+  display: inline;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  position: relative;
+  top: -52px;
+  left: 0;
+}
+.story:nth-child(1) .story-desc .card-title {
+  font-size: 22px;
+  margin-bottom: 60px;
+}
+
+.story:nth-child(1) .story-date > p {
+  background-color: rgb(17, 226, 253);
+}
+.story:nth-child(3) .story-date > p {
+  background-color: rgb(131, 23, 233);
+}
+.story:nth-child(1) {
+    grid-column: span 2;
+  grid-row: span 2;
+}
+
+.story-btn {
+  background-color: #000;
+}
 
 /* Mobile responsive --------->>> */
 @media screen and (max-width: 576px) {
@@ -234,10 +308,10 @@ nav {
     font-size: 16px;
   }
   .section-title {
-  font-size: 26px;
-}
+    font-size: 26px;
+  }
   /* Header ------------>>> */
-  header{
+  header {
     height: fit-content;
     padding-bottom: 50px;
   }
@@ -291,22 +365,45 @@ nav {
   }
 
   /* Standerd Curriculum ------>> */
-  #standard-curriculum{
+  #standard-curriculum {
     padding: 20px 0;
   }
   .curriculums {
     flex-direction: column;
     gap: 20px;
     padding: 20px 0;
-}
+  }
 
   .curriculum {
     width: 95%;
   }
-  .curriculum > p{
+  .curriculum > p {
     width: 75%;
   }
-  .navigation{
+  .navigation {
     display: none;
+  }
+
+  /* Our Story ------->>> */
+  .story:nth-child(1) {
+    display: none;
+  }
+  .stories {
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .story > img {
+    width: 95%;
+  }
+  .story-desc {
+    padding: 15px;
+  }
+  .story-desc > .card-title {
+    font-size: 12px;
+  }
+  .story-date > p {
+    font-size: 8px;
+    padding: 6px 12px;
+    top: -33px;
   }
 }
